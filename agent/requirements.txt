@@ -1,0 +1,6 @@
+langchain_community==0.2.16
+tiktoken==0.7.0
+langchainhub==0.1.21
+chromadb==0.5.5
+langchain==0.2.16
+langgraph==0.2.19
