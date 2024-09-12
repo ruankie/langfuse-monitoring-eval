@@ -158,4 +158,5 @@ cython_debug/
 .vscode
 
 # Knowledge base contents
-knowledge-base/vectorstore/
+knowledge_base/vectorstore/
+knowledge_base/embedding_model/
