@@ -43,7 +43,7 @@ style: |
 
 ---
 
-## 🌐 Introduction: Why Monitor & Evaluate LLM Apps?
+## ❓ Why Monitor & Evaluate LLM Apps?
 
 - **Ensure Quality & Performance**
   - Track hallucination, retrieval accuracy, latency, etc.
@@ -58,22 +58,37 @@ style: |
 
 ---
 
-## ⚡ Setting up Local LLMs for Fast Prototyping
+## ⚡ Setting Up
 
-- **Ollama**: Easy local setup for LLMs 🖥️
-  - Installation and setup
-  - Advantages of local LLMs for development 💻
-- **Running LLMs Locally**
-  - Avoiding cloud costs 🚫💰
-  - Iterating prototypes efficiently 🔄
+> Local LLMs for zero-cost learning and prototyping
+
+### 🦙 Ollama
+
+- For locally running LLMs
+- Available for macOS, Linux, and Windows (preview)
+- Familiar Docker feel with `:version` tags and commands like `pull` and `run`
+
+![bg right:30% height:250px](../assets/ollama.png)
+
 ---
 
-## 🛠️ Ollama Demo: Running LLMs Locally
+## 🦙 Ollama Setup
 
-- **Live Demo** of Ollama setup 🎥
-- How to deploy and test an LLM locally:
-  - Simple local deployment 📦
-  - Monitoring responses 🔍
+- ⬇️ Download app from [`https://ollama.com/`](https://ollama.com/)
+- Download LLM of choice
+
+  ```shell
+  ollama pull llama3.1:8b
+  ```
+
+- To test, run LLM in terminal
+
+  ```shell
+  ollama run llama3.1:8b
+  ```
+  
+![bg right:30% height:250px](../assets/ollama.png)
+
 ---
 
 ## 🧰 Monitoring LLM Apps with Langfuse
