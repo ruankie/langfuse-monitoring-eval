@@ -86,38 +86,74 @@ style: |
   ```shell
   ollama run llama3.1:8b
   ```
-  
+
 ![bg right:30% height:250px](../assets/ollama.png)
 
 ---
 
-## 🧰 Monitoring LLM Apps with Langfuse
+## 📊 Monitoring LLM Apps with Langfuse
 
-- **What is Langfuse?** 🚀
-  - Open-source platform for LLM tracing and evaluation
-  - Focus on detailed app performance metrics 📊
-- **Why Monitor?**
-  - Spot issues before they impact users 🔍
-  - Ensure consistent LLM performance 📈
+- **What is Langfuse?**
+  - Open Source LLM engineering platform
+  - For tracing, evaluation, prompt management, etc.
+  - Can be used to debug and improve your LLM apps
+  - Can use as service or self-host
+
+![bg right:30% height:200px](../assets/langfuse.png)
+
 ---
 
 ## 🏗️ Setting Up Langfuse
 
-- **Installing Langfuse** 🛠️
-  - Installation guide
-  - Integrating Langfuse with Python SDK 🐍
-- **Configuring Langfuse for Tracing**
-  - Key configurations for monitoring and logs 📝
-  - Setting up evaluation datasets 📚
+> Option 1: Use as service
+
+- Sign up at [`https://cloud.langfuse.com/`](https://cloud.langfuse.com/)
+- Select region for hosting (`EU` or `US`)
+- Create a new Project
+- Generate API keys for sending traces
+
+![bg right:30% height:200px](../assets/langfuse.png)
+
 ---
 
-## 🎯 Monitoring with Langfuse: Live Example
+## 🏗️ Setting Up Langfuse
 
-- **Using Langfuse's Python Decorator** 🔄
-  - Tracing requests and responses in LLM apps
-  - Real-time dashboard view 📊
-- **Example Implementation**:
-  - Simple Langfuse integration in a Python LLM app
+> Option 2: Locally, with Docker compose
+
+- Requires `docker` and `docker compose` - get with [Docker Desktop](https://docs.docker.com/get-started/get-docker/)
+- Run Docker compose to spin up local Langfuse
+
+  ```shell
+  # Clone the Langfuse repository
+  git clone https://github.com/langfuse/langfuse.git
+  cd langfuse
+  
+  # Start the server and database
+  docker compose up
+  ```
+
+---
+
+## ✅ Done Setting Up Langfuse
+
+- Now we have a Langfuse instance
+  - Langfuse web UI (at `localhost:3000`)
+  - Postgres DB as backend (at `localhost:5432`)
+
+---
+
+CONTINUE HERE...
+
+---
+
+## 🎯 Monitoring with Langfuse
+
+> Instrumenting your code
+
+- Configure your service to talk to your Langfuse instance
+- Python decorator
+- LangChain handler
+
 ---
 
 ## 📊 LLM-Assisted Evaluation with Langfuse
