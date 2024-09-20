@@ -43,24 +43,18 @@ style: |
 
 ---
 
-## 🛠️ Tools
-
-- Python
-- Docker
-- LangChain
-- LangGraph
-- Ollama
-- Langfuse
-
-
-![bg right:30% height:90px](../assets/python.png)
-
----
-
 ## 🌐 Introduction: Why Monitor & Evaluate LLM Apps?
 
-- LLM apps are at the core of modern solutions 🔍
-- Challenges: Monitoring, evaluation, and cost-effectiveness 💡
+- **Ensure Quality & Performance**
+  - Track hallucination, retrieval accuracy, latency, etc.
+  - To maintain a high-quality user experience
+- **Detect Errors**
+  - Harmful outputs
+- **Identify Areas of Improvement**
+  - Reduce costs
+  - Reduce latency
+  - Improve answers
+  - If failure occurs, see when and where
 
 ---
 
