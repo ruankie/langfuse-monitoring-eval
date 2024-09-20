@@ -1,0 +1,150 @@
+---
+marp: true
+theme: default
+class: invert
+# size: 16:9
+footer: Ruan Pretorius | October 2024 | ![grayscale height:15](../assets/melio-logo.svg)
+style: |
+  section {
+    font-size: 32px;
+  }
+---
+
+![bg left:35% height:300px](../assets/pyconza.png)
+
+# Monitoring and Evaluating LLM Apps
+> *Using Langfuse*
+
+---
+
+## About me
+
+##### Hi there, I'm Ruan Pretorius 👋
+
+- ☕ I turn coffee into AI
+- 🖥 I am a data scientist at *[melio.ai](https://melio.ai/)*
+  - We help you build and deploy your data intensive apps to unlock value from your data, follow us on LinkedIn
+- 🔗 You can find me on GitHub *[@ruankie](https://github.com/ruankie)*
+- ✉️ Or contact me via email: *ruan@melio.ai*
+
+#
+
+![height:50](../assets/melio-logo.svg)
+
+---
+
+## 🚏 Outline
+
+- **Introduction**: Why monitor/evaluate LLM apps?
+- **Setup**: Local LLMs for prototyping
+- **Monitoring**: with Langfuse
+- **Evaluation**: LLM-assisted with Ollama and Langfuse
+- **Takeaways and Conclusion**
+
+---
+
+## 🛠️ Tools
+
+- Python
+- Docker
+- LangChain
+- LangGraph
+- Ollama
+- Langfuse
+
+
+![bg right:30% height:90px](../assets/python.png)
+
+---
+
+## 🌐 Introduction: Why Monitor & Evaluate LLM Apps?
+
+- LLM apps are at the core of modern solutions 🔍
+- Challenges: Monitoring, evaluation, and cost-effectiveness 💡
+
+---
+
+## ⚡ Setting up Local LLMs for Fast Prototyping
+
+- **Ollama**: Easy local setup for LLMs 🖥️
+  - Installation and setup
+  - Advantages of local LLMs for development 💻
+- **Running LLMs Locally**
+  - Avoiding cloud costs 🚫💰
+  - Iterating prototypes efficiently 🔄
+---
+
+## 🛠️ Ollama Demo: Running LLMs Locally
+
+- **Live Demo** of Ollama setup 🎥
+- How to deploy and test an LLM locally:
+  - Simple local deployment 📦
+  - Monitoring responses 🔍
+---
+
+## 🧰 Monitoring LLM Apps with Langfuse
+
+- **What is Langfuse?** 🚀
+  - Open-source platform for LLM tracing and evaluation
+  - Focus on detailed app performance metrics 📊
+- **Why Monitor?**
+  - Spot issues before they impact users 🔍
+  - Ensure consistent LLM performance 📈
+---
+
+## 🏗️ Setting Up Langfuse
+
+- **Installing Langfuse** 🛠️
+  - Installation guide
+  - Integrating Langfuse with Python SDK 🐍
+- **Configuring Langfuse for Tracing**
+  - Key configurations for monitoring and logs 📝
+  - Setting up evaluation datasets 📚
+---
+
+## 🎯 Monitoring with Langfuse: Live Example
+
+- **Using Langfuse's Python Decorator** 🔄
+  - Tracing requests and responses in LLM apps
+  - Real-time dashboard view 📊
+- **Example Implementation**:
+  - Simple Langfuse integration in a Python LLM app
+---
+
+## 📊 LLM-Assisted Evaluation with Langfuse
+
+- **Evaluation Datasets** 📚
+  - How Langfuse helps score and evaluate your LLM outputs
+- **LLM-Assisted Scoring** 🎯
+  - Automated evaluation using predefined metrics
+  - Feedback loop to improve LLM performance
+---
+
+## 📈 Best Practices for Monitoring and Evaluation
+
+- **Key Takeaways** 💡
+  - Prototyping fast and free with local LLMs 🖥️
+  - Monitoring with Langfuse to ensure app robustness 📊
+  - LLM-assisted evaluation for continuous improvement 🔁
+---
+
+## 🎉 Conclusion: Elevate Your LLM Workflow
+
+- **Summary** of key points:
+  - Local LLM setup with Ollama 🚀
+  - Langfuse for monitoring and evaluation 🧰
+  - Automating scoring and feedback 📝
+- **Final Thoughts**: Start small, scale smart! 🌟
+---
+
+#
+
+## <!--fit--> 🐍 Thank you!
+
+#
+
+- 🔗 GitHub: *[@ruankie](https://github.com/ruankie)*
+- ✉️ Email: *ruan@melio.ai*
+- 🏠 Melio website: *[melio.ai](https://melio.ai)*
+
+  ![height:50](../assets/melio-logo.svg)
