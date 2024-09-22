@@ -144,11 +144,24 @@ TODO: Show gif of Ollama running in terminal
 
 ---
 
+## 🏗️ Setting Up Langfuse
+
+> Before using in code
+
+- Finally, pip-install the package to use it
+
+  ```shell
+  pip install langfuse
+  ```
+
+---
+
 ## ✅ Done Setting Up Langfuse
 
-- Now we have a Langfuse instance
-  - Langfuse web UI (at `localhost:3000`)
+- Now we have our infrastructure set up
+  - Langfuse server with web UI (at `localhost:3000`)
   - Postgres DB as backend (at `localhost:5432`)
+- And the Python package needed to communicate with it
 
 ---
 
@@ -162,9 +175,24 @@ TODO: Show gif of Langfuse dashboard
 
 - Configure your app to talk to your Langfuse instance
   - Python decorator
-  - LangChain handler
+  - LangChain callback handler
 
 ---
+
+## 📡 Langfuse Instrumentation
+
+> Python decorator
+
+- Configure your app to talk to your Langfuse instance
+  - Python decorator
+  - LangChain callback handler
+
+---
+
+
+
+
+
 
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
