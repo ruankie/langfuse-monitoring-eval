@@ -181,11 +181,24 @@ TODO: Show gif of Langfuse dashboard
 
 ## 📡 Langfuse Instrumentation
 
-> Python decorator
+> Python decorator (for any Python function)
 
-- Configure your app to talk to your Langfuse instance
-  - Python decorator
-  - LangChain callback handler
+```python
+from langfuse.decorators import observe
+
+@observe()
+def call_llm(prompt: str):
+    # Any code
+    response: str = llm.invoke(prompt)
+    return response
+ 
+@observe()
+def main():
+    story = call_llm("Tell me a story")
+    return story
+
+main()
+```
 
 ---
 
