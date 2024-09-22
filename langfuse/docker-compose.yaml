@@ -3,6 +3,7 @@
 services:
   langfuse-server:
     image: langfuse/langfuse:2
+    platform: linux/amd64
     depends_on:
       db:
         condition: service_healthy
@@ -19,6 +20,7 @@ services:
 
   db:
     image: postgres
+    platform: linux/amd64
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
