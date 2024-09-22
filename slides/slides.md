@@ -83,13 +83,13 @@ style: |
 - ⬇️ Download app from [`https://ollama.com/`](https://ollama.com/)
 - Download LLM of choice
 
-  ```shell
+  ```bash
   ollama pull llama3.1:8b
   ```
 
 - To test, run LLM in terminal
 
-  ```shell
+  ```bash
   ollama run llama3.1:8b
   ```
 
@@ -133,7 +133,7 @@ TODO: Show gif of Ollama running in terminal
 - Requires `docker` and `docker compose` - get with [Docker Desktop](https://docs.docker.com/get-started/get-docker/)
 - Run Docker compose to spin up local Langfuse
 
-  ```shell
+  ```bash
   # Clone the Langfuse repository
   git clone https://github.com/langfuse/langfuse.git
   cd langfuse
@@ -148,10 +148,18 @@ TODO: Show gif of Ollama running in terminal
 
 > Before using in code
 
-- Finally, pip-install the package to use it
+- Finally, pip-install the `langfuse` package
 
-  ```shell
+  ```bash
   pip install langfuse
+  ```
+
+- And set these environment variables to communicate with your Langfuse instance
+
+  ```bash
+  export LANGFUSE_SECRET_KEY="sk-..."
+  export LANGFUSE_PUBLIC_KEY="pk-..."
+  export LANGFUSE_HOST="https://cloud.langfuse.com" # or local instance
   ```
 
 ---
@@ -161,7 +169,8 @@ TODO: Show gif of Ollama running in terminal
 - Now we have our infrastructure set up
   - Langfuse server with web UI (at `localhost:3000`)
   - Postgres DB as backend (at `localhost:5432`)
-- And the Python package needed to communicate with it
+- The Python package needed to communicate with it
+- And we've pointed it to our instance
 
 ---
 
@@ -174,6 +183,7 @@ TODO: Show gif of Langfuse dashboard
 > Instrumenting your code
 
 - Configure your app to talk to your Langfuse instance
+  - Configure Langfuse to send traces to correct instance
   - Python decorator
   - LangChain callback handler
 
@@ -193,17 +203,25 @@ def call_llm(prompt: str):
     return response
  
 @observe()
-def main():
+def get_story():
     story = call_llm("Tell me a story")
     return story
 
-main()
+get_story()
 ```
 
 ---
 
+TODO: Show Langfuse trace of this code
+> And explain concepts of Traces, Spans, etc.
+> See the [docs](https://langfuse.com/docs/tracing#introduction-to-observability--traces-in-langfuse)
 
+---
 
+TODO: (At end of langfuse section) List reasons to use Langfuse and some of its main features, also mention alternatives (Langserve, Phoenix)
+> See [docs](https://langfuse.com/docs/tracing#why-use-langfuse) for list
+
+---
 
 
 
