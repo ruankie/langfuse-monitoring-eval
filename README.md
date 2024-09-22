@@ -21,3 +21,32 @@ In the rapidly evolving landscape of AI, the ability to quickly iterate on proto
 **Target Audience and Takeaways:**
 
 This talk is aimed at developers and data scientists who are interested in monitoring and optimising their LLM applications. By the end of the session, attendees will have a better understanding of how to set up and monitor their LLM apps using Langfuse, as well as how to leverage local LLMs for rapid prototyping and evaluation. They will walk away with actionable insights and practical knowledge to enhance their workflows, making their AI solutions more efficient and reliable.
+
+## Usage
+
+1. Set up infrastructure
+
+    ```shell
+    cd langfuse
+    docker compose up
+    ```
+
+1. Open the Langfuse UI and create a project
+
+    1. Go to `http://localhost:3000/`
+    1. Create an account and log in (if done locally, this only stores a user account in your local database)
+    1. Create a new project and call it `pycon-demo`
+
+1. Set up virtual env to run code in (and install dependencies)
+
+    ```shell
+    python -m venv .venv && source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+
+1. Configure Langfuse by setting environment variables. Create a `.env` file and populate it with your Langfuse details (see `.env.example` for an example).
+
+1. Run the example apps and see the traces logged in Langfuse
+
+    - Simple examples in `./simple_examples/`
+    - Or some more complex examples in `./agent/`
