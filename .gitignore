@@ -159,3 +159,7 @@ cython_debug/
 
 # Mac stuff
 **.DS_Store
+
+# Knowledge base contents
+knowledge_base/vectorstore/
+knowledge_base/embedding_model/
