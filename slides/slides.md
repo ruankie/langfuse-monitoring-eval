@@ -3,14 +3,14 @@ marp: true
 theme: default
 class: invert
 # size: 16:9
-footer: Ruan Pretorius | October 2024 | ![grayscale height:15](../assets/melio-logo.svg)
+footer: Ruan Pretorius | October 2024 | ![grayscale height:15](../assets/logos/melio-logo.svg)
 style: |
   section {
     font-size: 32px;
   }
 ---
 
-![bg left:35% height:300px](../assets/pyconza.png)
+![bg left:35% height:300px](../assets/logos/pyconza.png)
 
 # Monitoring and Evaluating LLM Apps
 > *Using Langfuse*
@@ -29,7 +29,7 @@ style: |
 
 #
 
-![height:50](../assets/melio-logo.svg)
+![height:50](../assets/logos/melio-logo.svg)
 
 ---
 
@@ -58,6 +58,12 @@ style: |
 
 ---
 
+## 🏗️ What We'll Be Building
+
+![bg right height:600px](../assets/architecture/arch-dark.png)
+
+---
+
 ## ⚡ Setting Up
 
 > Local LLMs for zero-cost learning and prototyping
@@ -68,7 +74,7 @@ style: |
 - Available for macOS, Linux, and Windows (preview)
 - Familiar Docker feel with `:version` tags and commands like `pull` and `run`
 
-![bg right:30% height:250px](../assets/ollama.png)
+![bg right:30% height:200px](../assets/logos/ollama.png)
 
 ---
 
@@ -87,7 +93,7 @@ style: |
   ollama run llama3.1:8b
   ```
 
-![bg right:30% height:250px](../assets/ollama.png)
+![bg right:30% height:200px](../assets/logos/ollama.png)
 
 ---
 
@@ -103,7 +109,7 @@ TODO: Show gif of Ollama running in terminal
   - Can be used to debug and improve your LLM apps
   - Can use as service or self-host
 
-![bg right:30% height:200px](../assets/langfuse.png)
+![bg right:30% height:150px](../assets/logos/langfuse.png)
 
 ---
 
@@ -116,7 +122,7 @@ TODO: Show gif of Ollama running in terminal
 - Create a new Project
 - Generate API keys for sending traces
 
-![bg right:30% height:200px](../assets/langfuse.png)
+![bg right:30% height:150px](../assets/logos/langfuse.png)
 
 ---
 
@@ -154,9 +160,9 @@ TODO: Show gif of Langfuse dashboard
 
 > Instrumenting your code
 
-- Configure your service to talk to your Langfuse instance
-- Python decorator
-- LangChain handler
+- Configure your app to talk to your Langfuse instance
+  - Python decorator
+  - LangChain handler
 
 ---
 
@@ -196,4 +202,4 @@ TODO: Show gif of Langfuse dashboard
 - ✉️ Email: *ruan@melio.ai*
 - 🏠 Melio website: *[melio.ai](https://melio.ai)*
 
-  ![height:50](../assets/melio-logo.svg)
+  ![height:50](../assets/logos/melio-logo.svg)
