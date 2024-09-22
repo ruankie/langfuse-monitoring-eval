@@ -91,6 +91,10 @@ style: |
 
 ---
 
+TODO: Show gif of Ollama running in terminal
+
+---
+
 ## 📊 Monitoring LLM Apps with Langfuse
 
 - **What is Langfuse?**
@@ -142,7 +146,7 @@ style: |
 
 ---
 
-CONTINUE HERE...
+TODO: Show gif of Langfuse dashboard
 
 ---
 
