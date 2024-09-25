@@ -35,7 +35,7 @@ def _get_web_page_as_chunks(url: str) -> list[Document]:
     return doc_splits
 
 
-def _add_docs_to_vectorstore(documents: list[Document]) -> Chroma:
+def _add_docs_to_vectorstore(documents: list[Document]) -> None:
     """
     Use the embedding model to embed the input documents and
     populate the vectorstore. Save populated vectorstore to disk
@@ -49,30 +49,39 @@ def _add_docs_to_vectorstore(documents: list[Document]) -> Chroma:
 
     # Populate vectorstore with embeddings
     print("Populating vectorstore")
-    vectorstore = Chroma.from_documents(
+    _ = Chroma.from_documents(
         documents=documents,
         collection_name="rag-chroma",
         embedding=embedding_function,
         persist_directory=LOCAL_VECTORSTORE_PATH,
     )
+    print("Done.")
 
-    return vectorstore
 
-
-# TODO: separate ingest from load existing vectorstore
-def get_populated_blog_vectorstore() -> VectorStoreRetriever:
+def load_blog_vectorstore() -> VectorStoreRetriever:
     """
-    Ingest the content of a list of blog URLs and return a usable vectorstore.
+    Load an existing populated vectorstore from a local knowledge base path.
 
     Returns:
         VectorStoreRetriever: A populated vectorstore that can be used to
             retrieve relevant docs.
+    """
+    # Load embedding model
+    embedding_function = HuggingFaceEmbeddings(
+        cache_folder=LOCAL_EMBEDDING_MODEL_SAVE_PATH, model_name=HF_EMBEDDING_MODEL_NAME
+    )
 
-    Example:
-        ```py
-        retriever = get_populated_blog_vectorstore()
-        documents = retriever.get_relevant_documents(question)
-        ```
+    # Load vectorstore from disk
+    vectorstore = Chroma(
+        persist_directory=LOCAL_VECTORSTORE_PATH, embedding_function=embedding_function
+    )
+
+    return vectorstore.as_retriever()
+
+
+def populate_blog_vectorstore() -> None:
+    """
+    Ingest the content of a list of blog URLs into a local vectorstore.
     """
     # Get website content as text chunks
     docs = []
@@ -80,11 +89,10 @@ def get_populated_blog_vectorstore() -> VectorStoreRetriever:
         docs += _get_web_page_as_chunks(url)
 
     # Add docs to vectorstore
-    vectorstore = _add_docs_to_vectorstore(documents=docs)
-    return vectorstore.as_retriever()
+    _add_docs_to_vectorstore(documents=docs)
 
 
 if __name__ == "__main__":
-    """When this script is executed, create a populated vectorstore."""
-    _ = get_populated_blog_vectorstore()
+    """When this script is executed, create a populated local vectorstore."""
+    populate_blog_vectorstore()
     print("Knowledge base populated successfully.")
