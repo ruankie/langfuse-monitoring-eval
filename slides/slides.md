@@ -216,7 +216,33 @@ get_story()
 
 > Traces, spans, nesting...
 
-![height:500px](../assets/screenshots/lf-get-story.png)
+![height:500px](../assets/screenshots/lf-story.png)
+
+---
+
+## 📡 Langfuse Instrumentation
+
+> LangChain callback handler (for automatic LangChain integration)
+
+```python
+from langfuse.callback import CallbackHandler
+
+langfuse_handler = CallbackHandler()
+
+# Any LangChain Runnable (e.g. RAG chain)
+rag_chain.invoke(
+    "Explain how the different types of agent memory work",
+    config={"callbacks": [langfuse_handler]}
+)
+```
+
+---
+
+## 🪢 Langfuse Trace
+
+> Automatically labelled Traces/Spans
+
+![height:500px](../assets/screenshots/lf-rag.png)
 
 ---
 
