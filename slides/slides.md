@@ -212,6 +212,14 @@ get_story()
 
 ---
 
+## 🪢 Langfuse Trace
+
+> Traces, spans, nesting...
+
+![height:500px](../assets/screenshots/lf-get-story.png)
+
+---
+
 TODO: Show Langfuse trace of this code
 > And explain concepts of Traces, Spans, etc.
 > See the [docs](https://langfuse.com/docs/tracing#introduction-to-observability--traces-in-langfuse)
