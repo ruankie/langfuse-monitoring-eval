@@ -13,6 +13,7 @@ LOCAL_VECTORSTORE_PATH = os.path.join(PWD, "vectorstore/.chroma_db")
 LOCAL_EMBEDDING_MODEL_SAVE_PATH = os.path.join(
     PWD, f"./embedding_model/{HF_EMBEDDING_MODEL_NAME}"
 )
+VECTORSTORE_COLLECTION_NAME = "rag-chroma"
 URLS = [
     "https://lilianweng.github.io/posts/2023-06-23-agent/",
     "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
@@ -51,7 +52,7 @@ def _add_docs_to_vectorstore(documents: list[Document]) -> None:
     print("Populating vectorstore")
     _ = Chroma.from_documents(
         documents=documents,
-        collection_name="rag-chroma",
+        collection_name=VECTORSTORE_COLLECTION_NAME,
         embedding=embedding_function,
         persist_directory=LOCAL_VECTORSTORE_PATH,
     )
@@ -68,15 +69,18 @@ def load_blog_vectorstore() -> VectorStoreRetriever:
     """
     # Load embedding model
     embedding_function = HuggingFaceEmbeddings(
-        cache_folder=LOCAL_EMBEDDING_MODEL_SAVE_PATH, model_name=HF_EMBEDDING_MODEL_NAME
+        cache_folder=LOCAL_EMBEDDING_MODEL_SAVE_PATH,
+        model_name=HF_EMBEDDING_MODEL_NAME,
     )
 
     # Load vectorstore from disk
     vectorstore = Chroma(
-        persist_directory=LOCAL_VECTORSTORE_PATH, embedding_function=embedding_function
+        persist_directory=LOCAL_VECTORSTORE_PATH,
+        embedding_function=embedding_function,
+        collection_name=VECTORSTORE_COLLECTION_NAME,
     )
 
-    return vectorstore.as_retriever()
+    return vectorstore.as_retriever(search_kwargs={"k": 1})
 
 
 def populate_blog_vectorstore() -> None:

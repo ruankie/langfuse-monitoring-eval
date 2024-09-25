@@ -36,8 +36,8 @@ def get_rag_chain() -> callable:
     retriever = load_blog_vectorstore()
 
     # Create a RetrievalQA chain using the provided retriever and LLM
-    rag_chain = RetrievalQA.from_chain_type(
-        llm=llm, chain_type="stuff", retriever=retriever
+    rag_chain = RetrievalQA.from_llm(
+        llm=llm, retriever=retriever
     )
 
     # Return the callable chain
