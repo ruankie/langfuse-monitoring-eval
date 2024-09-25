@@ -24,7 +24,7 @@ This talk is aimed at developers and data scientists who are interested in monit
 
 ## Usage
 
-1. Set up infrastructure
+1. Set up local Langfuse infrastructure
 
     ```shell
     cd langfuse
@@ -45,6 +45,15 @@ This talk is aimed at developers and data scientists who are interested in monit
     ```
 
 1. Configure Langfuse by setting environment variables. Create a `.env` file and populate it with your Langfuse details (see `.env.example` for an example).
+
+1. Create a local knowledge base that your apps can use to retrieve information from.
+
+    > This only needs to be done once. You don't need to do this to run the `simple_examples`.
+
+    ```shell
+    cd knowledge_base
+    ./gen_kb.sh
+    ```
 
 1. Run the example apps and see the traces logged in Langfuse
 

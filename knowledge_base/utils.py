@@ -10,7 +10,9 @@ from langchain_core.vectorstores import VectorStoreRetriever
 PWD = os.path.dirname(os.path.abspath(__file__))
 HF_EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 LOCAL_VECTORSTORE_PATH = os.path.join(PWD, "vectorstore/.chroma_db")
-LOCAL_EMBEDDING_MODEL_SAVE_PATH = os.path.join(PWD, f"./embedding_model/{HF_EMBEDDING_MODEL_NAME}")
+LOCAL_EMBEDDING_MODEL_SAVE_PATH = os.path.join(
+    PWD, f"./embedding_model/{HF_EMBEDDING_MODEL_NAME}"
+)
 URLS = [
     "https://lilianweng.github.io/posts/2023-06-23-agent/",
     "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
@@ -80,3 +82,9 @@ def get_populated_blog_vectorstore() -> VectorStoreRetriever:
     # Add docs to vectorstore
     vectorstore = _add_docs_to_vectorstore(documents=docs)
     return vectorstore.as_retriever()
+
+
+if __name__ == "__main__":
+    """When this script is executed, create a populated vectorstore."""
+    _ = get_populated_blog_vectorstore()
+    print("Knowledge base populated successfully.")
