@@ -272,10 +272,30 @@ CONTINUE HERE...
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
 - **Evaluation Datasets** 📚
-  - How Langfuse helps score and evaluate your LLM outputs
+  - To capture inputs and expected outputs for your system
+  - To log runs of your system versions on the data
+  - For tracking performance over time
 - **LLM-Assisted Scoring** 🎯
+  - Attach a score to a trace (human or programmatic evaluation)
   - Automated evaluation using predefined metrics
-  - Feedback loop to improve LLM performance
+  - Use as feedback loop to improve your system's performance
+
+---
+
+## Langfuse Dataset
+
+---
+
+## Langfuse Dataset Runs
+
+---
+
+## Langfuse Trace Annotation
+
+---
+
+## App Eval Example
+
 ---
 
 ## 📈 Best Practices for Monitoring and Evaluation
