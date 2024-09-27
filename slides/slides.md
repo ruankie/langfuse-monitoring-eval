@@ -97,7 +97,11 @@ style: |
 
 ---
 
-TODO: Show gif of Ollama running in terminal
+## 🦙 Testing Ollama in a Terminal
+
+![ollama](../assets/screenshots/ollama-run.gif)
+
+![bg right:30% height:200px](../assets/logos/ollama.png)
 
 ---
 
@@ -174,7 +178,11 @@ TODO: Show gif of Ollama running in terminal
 
 ---
 
-TODO: Show gif of Langfuse dashboard
+### 🪢 The Langfuse Dashboard
+
+![lfdash height:500px](../assets/screenshots/lf-dash.gif)
+
+![bg right:25% height:100px](../assets/logos/langfuse.png)
 
 ---
 
@@ -257,7 +265,9 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ---
 
+CONTINUE HERE...
 
+---
 
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
