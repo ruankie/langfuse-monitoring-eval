@@ -337,6 +337,8 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
   dataset = langfuse.get_dataset("eval-dataset-v1")
   ```
 
+- And loop through items in the dataset for passing to your app
+
 ---
 
 ## 🪢 Add Loop Through Dataset and Eval Responses
@@ -368,9 +370,18 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ## 🪢 Langfuse Trace Annotation
 
+- As seen, you can attach values/scores to Traces
+  - Using Python SDK (programmatic eval with `langfuse.score()`)
+  - Or in the Dashboard (human eval, with `Annotations` button)
+- These scores are aggregated per Dataset Run and shown in the Dashboard
+
 ---
 
-## 🪢 App Eval Example
+## 🪢 Langfuse Trace Annotation
+
+> Very useful to compare performance of your app versions
+
+![height:420px](../assets/screenshots/lf-runs.png)
 
 ---
 
