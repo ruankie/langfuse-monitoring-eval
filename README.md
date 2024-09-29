@@ -55,7 +55,25 @@ This talk is aimed at developers and data scientists who are interested in monit
     ./gen_kb.sh
     ```
 
-1. Run the example apps and see the traces logged in Langfuse
+1. Monitoring: Run the example apps and see the traces logged in Langfuse
 
     - Simple examples in `./simple_examples/`
     - Or some more complex examples in `./agent/`
+
+1. Eval: Create an eval dataset and run eval on both agent versions
+
+    > Run all these commands from the `eval/` directory
+
+    - Create the eval dataset in Langfuse
+
+      ```shell
+      python create_dataset.py
+      ```
+
+    - Run eval on a version of the agent (e.g. `0.0.1`)
+
+      ```shell
+      python run_eval.py --dataset_name eval-dataset-v1 --agent_ver 0.0.1
+      ```
+
+1. Inspect all Traces,Datasets, and Dataset Runs in the Langfuse Dashboard (at `http://localhost:3000/`)
