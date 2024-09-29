@@ -331,6 +331,39 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ## 🪢 Langfuse Dataset Runs
 
+- Now you can pull the dataset
+
+  ```python
+  dataset = langfuse.get_dataset("eval-dataset-v1")
+  ```
+
+---
+
+## 🪢 Add Loop Through Dataset and Eval Responses
+
+  ```python
+  for item in dataset.items:
+    # Invoke app
+    output, lf_trace_id = invoke_agent(question=item.input)
+
+    # Link trace to dataset run
+    item.link(
+      run_name="Eval agent v0.0.1",
+      run_metadata={...},
+      trace_id=lf_trace_id,
+    )
+
+    # Eval
+    c = get_correctness(output, item.expected_output)
+
+    # Add score
+    langfuse.score(
+      trace_id=lf_trace_id,
+      name="Answer Correctness,
+      value=c
+    )
+  ```
+
 ---
 
 ## 🪢 Langfuse Trace Annotation
