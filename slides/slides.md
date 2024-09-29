@@ -305,7 +305,27 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ## 🪢 Langfuse Dataset
 
-> TODO: show screenshot of dataset in dashboard
+- Finally, populate the dataset with input-output pairs
+
+  ```python
+  dataset = {
+    "question1": "answer1",
+    ...
+  }
+
+  for question, expected_ans in dataset.items():
+    langfuse.create_dataset_item(
+      dataset_name="eval-dataset-v1",
+      input=question,
+      expected_output=expected_ans,
+    )
+  ```
+
+---
+
+## 🪢 Langfuse Dataset
+
+![height:500px](../assets/screenshots/lf-dataset.png)
 
 ---
 
