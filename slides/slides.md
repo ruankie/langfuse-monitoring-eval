@@ -385,12 +385,24 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ---
 
+## 🪢 Langfuse Conclusion
+
+- This was just a quick overview of Langfuse
+  - It also has other features, like prompt management
+  - New updates released often
+- Some Langfuse alternatives
+  - Arize Phoenix
+  - LangSmith (from LangChain)
+
+---
+
 ## 📈 Best Practices for Monitoring and Evaluation
 
 - **Key Takeaways** 💡
   - Prototyping fast and free with local LLMs 🖥️
   - Monitoring with Langfuse to ensure app robustness 📊
   - LLM-assisted evaluation for continuous improvement 🔁
+
 ---
 
 ## 🎉 Conclusion: Elevate Your LLM Workflow
@@ -400,6 +412,7 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
   - Langfuse for monitoring and evaluation 🧰
   - Automating scoring and feedback 📝
 - **Final Thoughts**: Start small, scale smart! 🌟
+
 ---
 
 #
