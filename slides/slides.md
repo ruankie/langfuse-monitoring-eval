@@ -265,10 +265,6 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 ---
 
-CONTINUE HERE...
-
----
-
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
 - **Evaluation Datasets** 📚
@@ -290,19 +286,38 @@ CONTINUE HERE...
 
 ---
 
-## Langfuse Dataset
+## 🪢 Langfuse Dataset
+
+- First, create a Langfuse client with the Python SDK
+
+  ```python
+  from langfuse import Langfuse
+  langfuse = Langfuse()
+  ```
+
+- Then, create a dataset with a name
+
+  ```python
+  langfuse.create_dataset(name="eval-dataset-v1")
+  ```
 
 ---
 
-## Langfuse Dataset Runs
+## 🪢 Langfuse Dataset
+
+> TODO: show screenshot of dataset in dashboard
 
 ---
 
-## Langfuse Trace Annotation
+## 🪢 Langfuse Dataset Runs
 
 ---
 
-## App Eval Example
+## 🪢 Langfuse Trace Annotation
+
+---
+
+## 🪢 App Eval Example
 
 ---
 
