@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append("../agent")
-from agents import BasicAgent
+from agents import BasicAgent, AdvancedAgent
 
 from asyncio import run
 import logging
@@ -48,8 +48,7 @@ def invoke_agent(prompt: str, agent_version: str) -> Tuple[str, str, list[str]]:
     if agent_version == "0.0.1":
         agent = BasicAgent()
     else:
-        # agent = AdvancedAgent()
-        raise NotImplementedError(f"Version {agent_version} of agent not implemented!")
+        agent = AdvancedAgent()
 
     # Invoke agent
     response = agent.invoke(prompt)
