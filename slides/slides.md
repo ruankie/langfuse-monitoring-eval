@@ -272,13 +272,21 @@ CONTINUE HERE...
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
 - **Evaluation Datasets** 📚
-  - To capture inputs and expected outputs for your system
+  - To capture a set of inputs and expected outputs for your system
   - To log runs of your system versions on the data
-  - For tracking performance over time
+  - For tracking performance over time or testing before pushing to prod
 - **LLM-Assisted Scoring** 🎯
   - Attach a score to a trace (human or programmatic evaluation)
   - Automated evaluation using predefined metrics
   - Use as feedback loop to improve your system's performance
+
+---
+
+## 🔁 Langfuse Eval Flow
+
+![height:450px](../assets/other/lf-eval-flow.webp)
+
+> From https://langfuse.com/docs/datasets/overview
 
 ---
 
