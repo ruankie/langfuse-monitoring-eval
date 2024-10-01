@@ -441,11 +441,9 @@ rag_chain.invoke(
 
 ---
 
-#
-
 ## <!--fit--> 🐍 Thank you!
 
-#
+![bg right:50% height:550px](../assets/other/repo-qr.png)
 
 - 🔗 GitHub: *[@ruankie](https://github.com/ruankie)*
 - ✉️ Email: *ruan@melio.ai*
