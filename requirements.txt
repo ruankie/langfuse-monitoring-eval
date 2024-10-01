@@ -1,0 +1,14 @@
+pydantic==1.10.18
+chromadb==0.5.11
+langchain_community==0.2.17
+tiktoken==0.7.0
+langchain==0.2.16
+langchainhub==0.1.21
+langgraph==0.2.28
+bs4==0.0.2
+torch==2.4.1
+sentence-transformers==3.1.1
+pandas==2.2.3
+langfuse==2.36.2
+ragas==0.1.9
+ipykernel==6.29.5

@@ -21,3 +21,59 @@ In the rapidly evolving landscape of AI, the ability to quickly iterate on proto
 **Target Audience and Takeaways:**
 
 This talk is aimed at developers and data scientists who are interested in monitoring and optimising their LLM applications. By the end of the session, attendees will have a better understanding of how to set up and monitor their LLM apps using Langfuse, as well as how to leverage local LLMs for rapid prototyping and evaluation. They will walk away with actionable insights and practical knowledge to enhance their workflows, making their AI solutions more efficient and reliable.
+
+## Usage
+
+1. Set up local Langfuse infrastructure
+
+    ```shell
+    cd langfuse
+    docker compose up
+    ```
+
+1. Open the Langfuse UI and create a project
+
+    1. Go to `http://localhost:3000/`
+    1. Create an account and log in (if done locally, this only stores a user account in your local database)
+    1. Create a new project and call it `pycon-demo`
+
+1. Set up virtual env to run code in (and install dependencies)
+
+    ```shell
+    python -m venv .venv && source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+
+1. Configure Langfuse by setting environment variables. Create a `.env` file and populate it with your Langfuse details (see `.env.example` for an example).
+
+1. Create a local knowledge base that your apps can use to retrieve information from.
+
+    > This only needs to be done once. You don't need to do this to run the `simple_examples`.
+
+    ```shell
+    cd knowledge_base
+    ./gen_kb.sh
+    ```
+
+1. Monitoring: Run the example apps and see the traces logged in Langfuse
+
+    - Simple examples in `./simple_examples/`
+    - Or some more complex examples in `./agent/`
+
+1. Eval: Create an eval dataset and run eval on both agent versions
+
+    > Run all these commands from the `eval/` directory
+
+    - Create the eval dataset in Langfuse
+
+      ```shell
+      python create_dataset.py
+      ```
+
+    - Run eval on a version of the agent (e.g. `0.0.1`)
+
+      ```shell
+      python run_eval.py --dataset_name eval-dataset-v1 --agent_ver 0.0.1
+      ```
+
+1. Inspect all Traces,Datasets, and Dataset Runs in the Langfuse Dashboard (at `http://localhost:3000/`)
