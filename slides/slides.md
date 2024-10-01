@@ -398,9 +398,12 @@ rag_chain.invoke(
 - This was just a quick overview of Langfuse
   - It also has other features, like prompt management
   - New updates released often
-- Some Langfuse alternatives
-  - Arize Phoenix
-  - LangSmith (from LangChain)
+- More reasons to choose Langfuse:
+  - Open-source
+  - Low performance overhead
+  - Multi-Modal tracing support
+  - Public API for custom integrations
+- Some Langfuse alternatives: Arize Phoenix, LangSmith (from LangChain)
 
 ---
 
