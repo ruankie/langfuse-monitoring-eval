@@ -77,3 +77,13 @@ This talk is aimed at developers and data scientists who are interested in monit
       ```
 
 1. Inspect all Traces,Datasets, and Dataset Runs in the Langfuse Dashboard (at `http://localhost:3000/`)
+
+## References
+
+- https://langfuse.com/docs
+- https://langfuse.com/guides/cookbook/datasets
+- https://langfuse.com/guides/cookbook/evaluation_of_rag_with_ragas
+- https://ollama.com/
+- https://python.langchain.com/docs
+- https://applied-llms.org/#evaluation-monitoring
+- https://www.anthropic.com/news/evaluating-ai-systems
