@@ -117,6 +117,25 @@ style: |
 
 ---
 
+## ❓Traces in Langfuse
+
+> Intro to Observability & Traces in Langfuse
+
+- `Trace`: Represents single request/operation of you app (with overall input and output)
+- `Observation`: Each Trace can contain multiple observations that represent sub-seps
+  - `Span`: General work step of some duration
+  - `Generation`: Special spans that represent AI generation steps (contain extra metadata like token usage, model, etc.)
+
+---
+
+### ❓Traces in Langfuse
+
+> Example: RAG Trace in Langfuse
+
+![height:500px](../assets/screenshots/lf-rag.png)
+
+---
+
 ## 🏗️ Setting Up Langfuse
 
 > Option 1: Use as service
@@ -254,17 +273,6 @@ rag_chain.invoke(
 
 ---
 
-TODO: Show Langfuse trace of this code
-> And explain concepts of Traces, Spans, etc.
-> See the [docs](https://langfuse.com/docs/tracing#introduction-to-observability--traces-in-langfuse)
-
----
-
-TODO: (At end of langfuse section) List reasons to use Langfuse and some of its main features, also mention alternatives (Langserve, Phoenix)
-> See [docs](https://langfuse.com/docs/tracing#why-use-langfuse) for list
-
----
-
 ## 📊 LLM-Assisted Evaluation with Langfuse
 
 - **Evaluation Datasets** 📚
@@ -372,7 +380,7 @@ TODO: (At end of langfuse section) List reasons to use Langfuse and some of its 
 
 - As seen, you can attach values/scores to Traces
   - Using Python SDK (programmatic eval with `langfuse.score()`)
-  - Or in the Dashboard (human eval, with `Annotations` button)
+  - Or in the Dashboard (human eval, with `Annotate` button)
 - These scores are aggregated per Dataset Run and shown in the Dashboard
 
 ---
