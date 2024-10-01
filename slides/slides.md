@@ -426,6 +426,21 @@ rag_chain.invoke(
 
 ---
 
+## 📄 References
+
+**Langfuse**
+- https://langfuse.com/docs
+- https://langfuse.com/guides/cookbook/datasets
+- https://langfuse.com/guides/cookbook/evaluation_of_rag_with_ragas
+
+**Ollama**
+- https://ollama.com/
+
+**LangChain**
+- https://python.langchain.com/docs
+
+---
+
 #
 
 ## <!--fit--> 🐍 Thank you!
