@@ -1,4 +1,4 @@
-# Monitoring and evaluating LLM apps with Langfuse.
+# Monitoring and evaluating LLM apps with Langfuse
 
 > Presented at PyConZA 2024.
 
