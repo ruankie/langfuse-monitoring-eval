@@ -393,6 +393,16 @@ rag_chain.invoke(
 
 ---
 
+## 💡 Tips and Caveats
+
+**LLM-assisted eval**
+- Can help, but it's not a silver bullet
+- Use to inform priors. Look at the "direction" it's pointing you in, rather than absolute values
+- Consider alternatives depending on your problem (e.g. execution evaluation for code generation)
+- If used, consider Chain of Thought to improve results and have humans evaluate your LLM evaluations
+
+---
+
 ## 🪢 Langfuse Conclusion
 
 - This was just a quick overview of Langfuse
@@ -407,37 +417,27 @@ rag_chain.invoke(
 
 ---
 
-## 📈 Best Practices for Monitoring and Evaluation
+## 🎉 Takeaways
 
-- **Key Takeaways** 💡
-  - Prototyping fast and free with local LLMs 🖥️
-  - Monitoring with Langfuse to ensure app robustness 📊
-  - LLM-assisted evaluation for continuous improvement 🔁
-
----
-
-## 🎉 Conclusion: Elevate Your LLM Workflow
-
-- **Summary** of key points:
-  - Local LLM setup with Ollama 🚀
-  - Langfuse for monitoring and evaluation 🧰
-  - Automating scoring and feedback 📝
-- **Final Thoughts**: Start small, scale smart! 🌟
+- Consider **Ollama** for zero-cost local **prototyping and learning**
+- Use **Langfuse** to help you with **monitoring and evaluation**
+- Set up a **feedback** loop to keep **refining iterations** of your LLM apps
+- Happy experimenting! 🧪
 
 ---
 
 ## 📄 References
 
-**Langfuse**
 - https://langfuse.com/docs
 - https://langfuse.com/guides/cookbook/datasets
 - https://langfuse.com/guides/cookbook/evaluation_of_rag_with_ragas
 
-**Ollama**
 - https://ollama.com/
 
-**LangChain**
 - https://python.langchain.com/docs
+
+- https://applied-llms.org/#evaluation-monitoring
+- https://www.anthropic.com/news/evaluating-ai-systems
 
 ---
 
